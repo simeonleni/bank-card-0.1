@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Card</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-top">
+                <div class="logo"><img src="/assets/visa-logo.png" alt=""></div>
+            </div>
+            <div class="card-middle">
+                <div class="card-chip">
+                    <img src="/assets/139767-200.png" alt="">
+                </div>
+                <div class="card-number">
+                    <span>
+                        <input type="text" placeholder="0" id="input1" maxlength="1"
+                            oninput="moveToNext(this, 'input2', 'input1')">
+                        <input type="text" placeholder="0" id="input2" maxlength="1"
+                            oninput="moveToNext(this, 'input3', 'input2')">
+                        <input type="text" placeholder="0" id="input3" maxlength="1"
+                            oninput="moveToNext(this, 'input4', 'input3')">
+                        <input type="text" placeholder="0" id="input4" maxlength="1"
+                            oninput="moveToNext(this, 'input5', 'input4')">
+                    </span>
+                    <span>
+                        <input type="text" placeholder="0" id="input5" maxlength="1"
+                            oninput="moveToNext(this, 'input6', 'input5')">
+                        <input type="text" placeholder="0" id="input6" maxlength="1"
+                            oninput="moveToNext(this, 'input7', 'input6')">
+                        <input type="text" placeholder="0" id="input7" maxlength="1"
+                            oninput="moveToNext(this, 'input8', 'input7')">
+                        <input type="text" placeholder="0" id="input8" maxlength="1"
+                            oninput="moveToNext(this, 'input9', 'input8')">
+                    </span>
+                    <span>
+                        <input type="text" placeholder="0" id="input9" maxlength="1"
+                            oninput="moveToNext(this, 'input10', 'input9')">
+                        <input type="text" placeholder="0" id="input10" maxlength="1"
+                            oninput="moveToNext(this, 'input11', 'input10')">
+                        <input type="text" placeholder="0" id="input11" maxlength="1"
+                            oninput="moveToNext(this, 'input12', 'input11')">
+                        <input type="text" placeholder="0" id="input12" maxlength="1"
+                            oninput="moveToNext(this, 'input13', 'input12')">
+                    </span>
+                    <span>
+                        <input type="text" placeholder="0" id="input13" maxlength="1"
+                            oninput="moveToNext(this, 'input14', 'input13')">
+                        <input type="text" placeholder="0" id="input14" maxlength="1"
+                            oninput="moveToNext(this, 'input15', 'input14')">
+                        <input type="text" placeholder="0" id="input15" maxlength="1"
+                            oninput="moveToNext(this, 'input16', 'input15')">
+                        <input type="text" placeholder="0" id="input16" maxlength="1">
+                    </span>
+                </div>
+            </div>
+            <div class="card-bottom">
+                <div class="card-date">
+                    <h1>Expiry <br> Date </h1>
+                    <p><input id="month" type="text" maxlength="2" placeholder="00">/<input id="year" type="text"
+                            maxlength="2" placeholder="00"></p>
+                </div>
+                <div class="card-owner">
+                    <input id="holder" type="text" placeholder="Card Holder">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

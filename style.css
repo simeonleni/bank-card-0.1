@@ -1,0 +1,139 @@
+:root {
+  --bg-colour: rgb(255, 255, 255);
+  --container-radius: 16px;
+  --box-padding: 40px;
+  --input-width: 24px;
+  --input-height: 24px;
+  --card-chip-width: 14%;
+  --font-size: 26px;
+  --background-color: rgb(231, 231, 231);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--font-size);
+  background-color: var(--background-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  height: 360px;
+  box-sizing: border-box;
+  padding: 10px 60px;
+  border-radius: var(--container-radius);
+  transform: perspective(1000px) rotateY(0deg);
+  background-image: url("/assets/grid.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-color: var(--bg-colour);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: rgb(66, 66, 66);
+}
+
+.card-top {
+  height: 80px;
+}
+.card-top .logo {
+  width: 150px;
+  height: 100%;
+  float: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.card-top .logo img {
+  width: 50%;
+}
+.card-middle {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.card-middle .card-chip img {
+  width: var(--card-chip-width);
+  opacity: 0.5;
+}
+
+.card-middle .card-number {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-bottom {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.card-bottom .card-date {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.card-bottom .card-date p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.card-bottom .card-date p input {
+  width: 40px;
+}
+.card-bottom .card-owner {
+  height: 60px;
+  display: flex;
+}
+.card-bottom .card-owner input {
+  width: 100%;
+  height: 80%;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin: -6px;
+  background-color: transparent;
+  color: rgb(52, 52, 52);
+  margin: 0;
+}
+.card-number input,
+.card-date > p > input {
+  width: var(--input-width);
+  height: var(--input-height);
+  font-size: var(--font-size);
+  display: inline-block;
+  text-align: center;
+  line-height: 2;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  margin: -6px;
+  background-color: transparent;
+  color: rgb(52, 52, 52);
+}
+
+.card-date > h1 {
+  font-size: 12px;
+}
